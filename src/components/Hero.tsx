@@ -28,7 +28,7 @@ const Hero = () => {
           alt="Microverdes frescos cultivados em estufa"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/25 to-background/80" />
       </div>
 
       {/* Content */}
@@ -46,10 +46,10 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6 }}
-                className="text-5xl md:text-7xl font-bold leading-tight"
+                className="text-4xl md:text-6xl font-light leading-relaxed tracking-wide"
               >
-                <span className="text-primary block mb-4">{phrases[currentPhrase].line1}</span>
-                <span className="text-accent">{phrases[currentPhrase].line2}</span>
+                <span className="text-white drop-shadow-lg block mb-4">{phrases[currentPhrase].line1}</span>
+                <span className="text-white/90 drop-shadow-lg text-3xl md:text-5xl font-extralight">{phrases[currentPhrase].line2}</span>
               </motion.h1>
             </AnimatePresence>
           </div>
@@ -57,7 +57,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => document.getElementById("produtos")?.scrollIntoView({ behavior: "smooth" })}
-            className="bg-primary text-primary-foreground px-8 py-4 rounded-xl text-lg font-semibold shadow-medium hover:shadow-large transition-all mt-8"
+            className="bg-white/90 text-primary px-8 py-4 rounded-lg text-base font-light tracking-wide shadow-lg hover:bg-white hover:shadow-xl transition-all mt-8 backdrop-blur-sm"
           >
             Conheça Nossos Produtos
           </motion.button>
