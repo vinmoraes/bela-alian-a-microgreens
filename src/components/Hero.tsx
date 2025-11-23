@@ -1,7 +1,24 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-microgreens-new.jpg";
 
 const Hero = () => {
+  const phrases = [
+    { line1: "FRESCOR, CRIATIVIDADE E SABOR!", line2: "PRODUZIDO EM AMPARO SP" },
+    { line1: "INSPIRAÇÃO DA NATUREZA NO SEU PRATO", line2: "DESDE 2013" },
+    { line1: "GRANDE SABOR EM PEQUENAS FOLHAS", line2: "PRODUZIDO EM AMPARO SP" }
+  ];
+
+  const [currentPhrase, setCurrentPhrase] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPhrase((prev) => (prev + 1) % phrases.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -21,19 +38,26 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-primary mb-6 leading-tight">
-            Microverdes Frescos
-            <br />
-            <span className="text-accent">Colhidos com Amor</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-foreground/80 max-w-3xl mx-auto mb-8">
-            Do nosso sítio para a sua mesa. Cultivados em Amparo-SP com técnicas sustentáveis e carinho artesanal.
-          </p>
+          <div className="min-h-[200px] md:min-h-[250px] flex items-center justify-center">
+            <AnimatePresence mode="wait">
+              <motion.h1
+                key={currentPhrase}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.6 }}
+                className="text-5xl md:text-7xl font-bold leading-tight"
+              >
+                <span className="text-primary block mb-4">{phrases[currentPhrase].line1}</span>
+                <span className="text-accent">{phrases[currentPhrase].line2}</span>
+              </motion.h1>
+            </AnimatePresence>
+          </div>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => document.getElementById("produtos")?.scrollIntoView({ behavior: "smooth" })}
-            className="bg-primary text-primary-foreground px-8 py-4 rounded-xl text-lg font-semibold shadow-medium hover:shadow-large transition-all"
+            className="bg-primary text-primary-foreground px-8 py-4 rounded-xl text-lg font-semibold shadow-medium hover:shadow-large transition-all mt-8"
           >
             Conheça Nossos Produtos
           </motion.button>
