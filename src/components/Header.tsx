@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,14 +23,18 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm shadow-soft">
-      <nav className="container mx-auto px-4 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+      <nav className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-2xl md:text-3xl font-bold text-primary hover:text-primary/80 transition-colors"
+            className="hover:opacity-80 transition-opacity"
           >
-            Sítio Bela Aliança
+            <img 
+              src={logo} 
+              alt="Sítio Bela Aliança" 
+              className="h-16 md:h-20"
+            />
           </button>
 
           {/* Desktop Menu */}
@@ -38,7 +43,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                className="text-sm font-semibold text-white hover:text-white/80 transition-colors uppercase tracking-wide"
               >
                 {item.label}
               </button>
@@ -49,7 +54,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden text-white hover:text-white/80 hover:bg-white/10"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X /> : <Menu />}
@@ -58,12 +63,12 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-3">
+          <div className="md:hidden mt-4 pb-4 space-y-3 bg-black/80 backdrop-blur-sm rounded-lg p-4">
             {menuItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+                className="block w-full text-left py-2 text-sm font-semibold text-white hover:text-white/80 transition-colors uppercase tracking-wide"
               >
                 {item.label}
               </button>
