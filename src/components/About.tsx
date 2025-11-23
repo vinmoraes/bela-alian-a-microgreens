@@ -32,16 +32,16 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-6"
+              className="relative h-64 md:h-80"
             >
-              <div className="bg-white p-4 shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
+              <div className="absolute top-0 left-0 bg-white p-3 shadow-xl transform rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 w-48 md:w-56 z-10">
                 <img 
                   src={teamPhoto1} 
                   alt="Produtor com bandeja de microverdes"
                   className="w-full h-auto"
                 />
               </div>
-              <div className="bg-white p-4 shadow-xl transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+              <div className="absolute bottom-0 right-0 bg-white p-3 shadow-xl transform -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 w-48 md:w-56">
                 <img 
                   src={teamPhoto2} 
                   alt="Cultivo artesanal de microverdes"
