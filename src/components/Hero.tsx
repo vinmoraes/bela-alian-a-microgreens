@@ -49,7 +49,7 @@ const Hero = () => {
                 className="text-4xl md:text-6xl font-light leading-relaxed tracking-wide"
               >
                 <span className="text-white drop-shadow-lg block mb-4">{phrases[currentPhrase].line1}</span>
-                <span className="text-white/90 drop-shadow-lg text-3xl md:text-5xl font-extralight">{phrases[currentPhrase].line2}</span>
+                <span className="text-white drop-shadow-lg text-xl md:text-2xl font-bold tracking-wider">{phrases[currentPhrase].line2}</span>
               </motion.h1>
             </AnimatePresence>
           </div>
