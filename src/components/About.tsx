@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import aboutBackground from "@/assets/about-background.jpg";
-import teamPhoto1 from "@/assets/team-photo-1.jpg";
-import teamPhoto2 from "@/assets/team-photo-2.jpg";
+import paisDaFlora from "@/assets/pais-da-flora.jpg";
 
 const About = () => {
   return (
@@ -32,19 +31,12 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative h-64 md:h-80"
+              className="flex justify-center"
             >
-              <div className="absolute top-0 left-0 bg-white p-3 shadow-xl transform rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 w-48 md:w-56 z-10">
+              <div className="bg-white p-4 shadow-xl transform rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 w-full max-w-md">
                 <img 
-                  src={teamPhoto1} 
-                  alt="Produtor com bandeja de microverdes"
-                  className="w-full aspect-square object-cover"
-                />
-              </div>
-              <div className="absolute bottom-0 right-0 bg-white p-3 shadow-xl transform -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 w-48 md:w-56">
-                <img 
-                  src={teamPhoto2} 
-                  alt="Cultivo artesanal de microverdes"
+                  src={paisDaFlora} 
+                  alt="Pais da Flora - Produtores de microverdes"
                   className="w-full aspect-square object-cover"
                 />
               </div>
