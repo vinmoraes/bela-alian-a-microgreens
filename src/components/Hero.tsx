@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-microgreens.jpg";
+import heroImage from "@/assets/hero-microgreens-new.jpg";
 
 const Hero = () => {
   return (
