@@ -38,14 +38,14 @@ const About = () => {
                 <img 
                   src={teamPhoto1} 
                   alt="Produtor com bandeja de microverdes"
-                  className="w-full h-auto"
+                  className="w-full aspect-square object-cover"
                 />
               </div>
               <div className="absolute bottom-0 right-0 bg-white p-3 shadow-xl transform -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 w-48 md:w-56">
                 <img 
                   src={teamPhoto2} 
                   alt="Cultivo artesanal de microverdes"
-                  className="w-full h-auto"
+                  className="w-full aspect-square object-cover"
                 />
               </div>
             </motion.div>
