@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import varietiesImage from "@/assets/microgreens-varieties.jpg";
+import productPlaceholder from "@/assets/product-placeholder.jpg";
 interface Product {
   name: string;
   description: string;
@@ -105,23 +105,8 @@ const Products = () => {
           </p>
         </motion.div>
 
-        {/* Hero Image */}
-        <motion.div initial={{
-        opacity: 0,
-        scale: 0.95
-      }} whileInView={{
-        opacity: 1,
-        scale: 1
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.6
-      }} className="mb-16 rounded-2xl overflow-hidden shadow-large max-w-5xl mx-auto">
-          
-        </motion.div>
-
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {products.map((product, index) => <motion.div key={product.name} initial={{
           opacity: 0,
           y: 20
@@ -133,32 +118,42 @@ const Products = () => {
         }} transition={{
           duration: 0.6,
           delay: index * 0.1
-        }} className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-medium transition-shadow">
-              <div className={`h-3 w-20 rounded-full mb-6 bg-gradient-to-r ${product.color}`} />
+        }} className="bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all">
+              <div className="aspect-square overflow-hidden bg-muted">
+                <img 
+                  src={productPlaceholder} 
+                  alt={product.name}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               
-              <h3 className="text-2xl font-bold text-foreground mb-3">
+              <div className="p-6">
+              <div className={`h-2 w-full bg-gradient-to-r ${product.color}`} />
+              
+              <h3 className="text-xl font-bold text-foreground mb-2">
                 {product.name}
               </h3>
               
-              <p className="text-foreground/70 mb-4 leading-relaxed">
+              <p className="text-foreground/70 mb-3 text-sm leading-relaxed">
                 {product.description}
               </p>
               
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-primary mb-2">Como Utilizar:</h4>
-                <p className="text-sm text-foreground/70">{product.uses}</p>
+              <div className="mb-3">
+                <h4 className="text-xs font-semibold text-primary mb-1">Como Utilizar:</h4>
+                <p className="text-xs text-foreground/70">{product.uses}</p>
               </div>
               
-              <div className="border-t border-border pt-4">
-                <h4 className="text-sm font-semibold text-primary mb-3">Preços:</h4>
-                <div className="flex gap-4">
+              <div className="border-t border-border pt-3">
+                <h4 className="text-xs font-semibold text-primary mb-2">Preços:</h4>
+                <div className="flex gap-2">
                   {product.prices.map(price => <div key={price.weight} className="flex-1">
-                      <div className="bg-muted rounded-lg p-3 text-center">
+                      <div className="bg-muted rounded-lg p-2 text-center">
                         <div className="text-xs text-muted-foreground mb-1">{price.weight}</div>
-                        <div className="text-lg font-bold text-primary">{price.price}</div>
+                        <div className="text-sm font-bold text-primary">{price.price}</div>
                       </div>
                     </div>)}
                 </div>
+              </div>
               </div>
             </motion.div>)}
         </div>
