@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Droplets, Sun, Scissors, PackageCheck } from "lucide-react";
 import greenhouseImage from "@/assets/greenhouse-production.jpg";
+import microgreensBackground from "@/assets/microgreens-background.jpg";
 
 const HowWeProduce = () => {
   const steps = [
@@ -27,8 +28,13 @@ const HowWeProduce = () => {
   ];
 
   return (
-    <section id="como-produzimos" className="py-20 md:py-32 bg-background">
-      <div className="container mx-auto px-4">
+    <section 
+      id="como-produzimos" 
+      className="py-20 md:py-32 relative bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${microgreensBackground})` }}
+    >
+      <div className="absolute inset-0 bg-black/50" />
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,10 +42,10 @@ const HowWeProduce = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Como Produzimos
           </h2>
-          <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
             Nosso processo artesanal garante qualidade, frescor e sabor incomparáveis
           </p>
         </motion.div>
