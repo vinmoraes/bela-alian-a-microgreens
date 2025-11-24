@@ -1,88 +1,102 @@
 import { motion } from "framer-motion";
 import varietiesImage from "@/assets/microgreens-varieties.jpg";
-
 interface Product {
   name: string;
   description: string;
   uses: string;
-  prices: { weight: string; price: string }[];
+  prices: {
+    weight: string;
+    price: string;
+  }[];
   color: string;
 }
-
 const Products = () => {
-  const products: Product[] = [
-    {
-      name: "Rabanete",
-      description: "Sabor picante e marcante, perfeito para adicionar personalidade aos pratos",
-      uses: "Saladas, sanduíches, tacos, pratos asiáticos",
-      prices: [
-        { weight: "40g", price: "R$ 12,00" },
-        { weight: "100g", price: "R$ 25,00" },
-      ],
-      color: "from-red-500/20 to-pink-500/20",
-    },
-    {
-      name: "Rúcula",
-      description: "Sabor levemente picante e aromático, ideal para paladares refinados",
-      uses: "Saladas gourmet, pizzas, massas, risoto",
-      prices: [
-        { weight: "40g", price: "R$ 10,00" },
-        { weight: "100g", price: "R$ 22,00" },
-      ],
-      color: "from-green-600/20 to-green-500/20",
-    },
-    {
-      name: "Girassol",
-      description: "Sabor suave e levemente adocicado, com textura crocante",
-      uses: "Saladas, wraps, sucos verdes, bowls",
-      prices: [
-        { weight: "40g", price: "R$ 11,00" },
-        { weight: "100g", price: "R$ 24,00" },
-      ],
-      color: "from-yellow-500/20 to-amber-500/20",
-    },
-    {
-      name: "Brócolis",
-      description: "Rico sabor de brócolis concentrado, nutritivo e versátil",
-      uses: "Sucos detox, saladas, pratos quentes, omeletes",
-      prices: [
-        { weight: "40g", price: "R$ 13,00" },
-        { weight: "100g", price: "R$ 28,00" },
-      ],
-      color: "from-emerald-600/20 to-green-600/20",
-    },
-    {
-      name: "Beterraba",
-      description: "Sabor terroso e adocicado, cor vibrante que realça qualquer prato",
-      uses: "Saladas coloridas, decoração, sucos, bowls",
-      prices: [
-        { weight: "40g", price: "R$ 14,00" },
-        { weight: "100g", price: "R$ 30,00" },
-      ],
-      color: "from-purple-600/20 to-fuchsia-600/20",
-    },
-    {
-      name: "Mostarda",
-      description: "Sabor intenso e picante, para quem aprecia temperos marcantes",
-      uses: "Sanduíches gourmet, carnes, saladas asiáticas",
-      prices: [
-        { weight: "40g", price: "R$ 11,00" },
-        { weight: "100g", price: "R$ 23,00" },
-      ],
-      color: "from-lime-500/20 to-green-500/20",
-    },
-  ];
-
-  return (
-    <section id="produtos" className="py-20 md:py-32 bg-gradient-warm">
+  const products: Product[] = [{
+    name: "Rabanete",
+    description: "Sabor picante e marcante, perfeito para adicionar personalidade aos pratos",
+    uses: "Saladas, sanduíches, tacos, pratos asiáticos",
+    prices: [{
+      weight: "40g",
+      price: "R$ 12,00"
+    }, {
+      weight: "100g",
+      price: "R$ 25,00"
+    }],
+    color: "from-red-500/20 to-pink-500/20"
+  }, {
+    name: "Rúcula",
+    description: "Sabor levemente picante e aromático, ideal para paladares refinados",
+    uses: "Saladas gourmet, pizzas, massas, risoto",
+    prices: [{
+      weight: "40g",
+      price: "R$ 10,00"
+    }, {
+      weight: "100g",
+      price: "R$ 22,00"
+    }],
+    color: "from-green-600/20 to-green-500/20"
+  }, {
+    name: "Girassol",
+    description: "Sabor suave e levemente adocicado, com textura crocante",
+    uses: "Saladas, wraps, sucos verdes, bowls",
+    prices: [{
+      weight: "40g",
+      price: "R$ 11,00"
+    }, {
+      weight: "100g",
+      price: "R$ 24,00"
+    }],
+    color: "from-yellow-500/20 to-amber-500/20"
+  }, {
+    name: "Brócolis",
+    description: "Rico sabor de brócolis concentrado, nutritivo e versátil",
+    uses: "Sucos detox, saladas, pratos quentes, omeletes",
+    prices: [{
+      weight: "40g",
+      price: "R$ 13,00"
+    }, {
+      weight: "100g",
+      price: "R$ 28,00"
+    }],
+    color: "from-emerald-600/20 to-green-600/20"
+  }, {
+    name: "Beterraba",
+    description: "Sabor terroso e adocicado, cor vibrante que realça qualquer prato",
+    uses: "Saladas coloridas, decoração, sucos, bowls",
+    prices: [{
+      weight: "40g",
+      price: "R$ 14,00"
+    }, {
+      weight: "100g",
+      price: "R$ 30,00"
+    }],
+    color: "from-purple-600/20 to-fuchsia-600/20"
+  }, {
+    name: "Mostarda",
+    description: "Sabor intenso e picante, para quem aprecia temperos marcantes",
+    uses: "Sanduíches gourmet, carnes, saladas asiáticas",
+    prices: [{
+      weight: "40g",
+      price: "R$ 11,00"
+    }, {
+      weight: "100g",
+      price: "R$ 23,00"
+    }],
+    color: "from-lime-500/20 to-green-500/20"
+  }];
+  return <section id="produtos" className="py-20 md:py-32 bg-gradient-warm">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6
+      }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
             Os Nossos Produtos
           </h2>
@@ -92,31 +106,34 @@ const Products = () => {
         </motion.div>
 
         {/* Hero Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 rounded-2xl overflow-hidden shadow-large max-w-5xl mx-auto"
-        >
-          <img
-            src={varietiesImage}
-            alt="Variedades de microverdes"
-            className="w-full h-auto"
-          />
+        <motion.div initial={{
+        opacity: 0,
+        scale: 0.95
+      }} whileInView={{
+        opacity: 1,
+        scale: 1
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6
+      }} className="mb-16 rounded-2xl overflow-hidden shadow-large max-w-5xl mx-auto">
+          
         </motion.div>
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {products.map((product, index) => (
-            <motion.div
-              key={product.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-medium transition-shadow"
-            >
+          {products.map((product, index) => <motion.div key={product.name} initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6,
+          delay: index * 0.1
+        }} className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-medium transition-shadow">
               <div className={`h-3 w-20 rounded-full mb-6 bg-gradient-to-r ${product.color}`} />
               
               <h3 className="text-2xl font-bold text-foreground mb-3">
@@ -135,22 +152,17 @@ const Products = () => {
               <div className="border-t border-border pt-4">
                 <h4 className="text-sm font-semibold text-primary mb-3">Preços:</h4>
                 <div className="flex gap-4">
-                  {product.prices.map((price) => (
-                    <div key={price.weight} className="flex-1">
+                  {product.prices.map(price => <div key={price.weight} className="flex-1">
                       <div className="bg-muted rounded-lg p-3 text-center">
                         <div className="text-xs text-muted-foreground mb-1">{price.weight}</div>
                         <div className="text-lg font-bold text-primary">{price.price}</div>
                       </div>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Products;
