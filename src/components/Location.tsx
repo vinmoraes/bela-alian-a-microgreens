@@ -51,7 +51,6 @@ const Location = () => {
                     <h4 className="font-semibold text-foreground mb-1">Endereço</h4>
                     <p className="text-foreground/70">
                       Sítio Bela Aliança<br />
-                      Estrada Municipal dos Pereiras Km 3<br />
                       Amparo, São Paulo
                     </p>
                   </div>
