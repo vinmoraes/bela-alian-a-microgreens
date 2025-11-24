@@ -17,7 +17,7 @@ const Products = () => {
     uses: "Saladas, sanduíches, tacos, pratos asiáticos",
     prices: [{
       weight: "40g",
-      price: "R$ 12,00"
+      price: "R$ 15,00"
     }, {
       weight: "100g",
       price: "R$ 25,00"
