@@ -29,10 +29,10 @@ const Products = () => {
     uses: "Saladas gourmet, pizzas, massas, risoto",
     prices: [{
       weight: "40g",
-      price: "R$ 10,00"
+      price: "R$ 15,00"
     }, {
       weight: "100g",
-      price: "R$ 22,00"
+      price: "R$ 25,00"
     }],
     color: "from-green-600/20 to-green-500/20"
   }, {
@@ -41,7 +41,7 @@ const Products = () => {
     uses: "Saladas, wraps, sucos verdes, bowls",
     prices: [{
       weight: "40g",
-      price: "R$ 11,00"
+      price: "R$ 10,00"
     }, {
       weight: "100g",
       price: "R$ 15,00"
@@ -53,10 +53,10 @@ const Products = () => {
     uses: "Sucos detox, saladas, pratos quentes, omeletes",
     prices: [{
       weight: "40g",
-      price: "R$ 13,00"
+      price: "R$ 18,00"
     }, {
       weight: "100g",
-      price: "R$ 28,00"
+      price: "R$ 32,00"
     }],
     color: "from-emerald-600/20 to-green-600/20"
   }, {
@@ -65,10 +65,10 @@ const Products = () => {
     uses: "Saladas coloridas, decoração, sucos, bowls",
     prices: [{
       weight: "40g",
-      price: "R$ 14,00"
+      price: "R$ 18,00"
     }, {
       weight: "100g",
-      price: "R$ 30,00"
+      price: "R$ 32,00"
     }],
     color: "from-purple-600/20 to-fuchsia-600/20"
   }, {
@@ -77,10 +77,10 @@ const Products = () => {
     uses: "Sanduíches gourmet, carnes, saladas asiáticas",
     prices: [{
       weight: "40g",
-      price: "R$ 11,00"
+      price: "R$ 15,00"
     }, {
       weight: "100g",
-      price: "R$ 23,00"
+      price: "R$ 25,00"
     }],
     color: "from-lime-500/20 to-green-500/20"
   }, {
@@ -89,10 +89,10 @@ const Products = () => {
     uses: "Saladas coloridas, decoração de pratos, wraps, bowls",
     prices: [{
       weight: "40g",
-      price: "R$ 12,00"
+      price: "R$ 18,00"
     }, {
       weight: "100g",
-      price: "R$ 26,00"
+      price: "R$ 32,00"
     }],
     color: "from-violet-600/20 to-purple-600/20"
   }, {
@@ -101,10 +101,10 @@ const Products = () => {
     uses: "Saladas, sanduíches, pizzas, pratos quentes",
     prices: [{
       weight: "40g",
-      price: "R$ 13,00"
+      price: "R$ 15,00"
     }, {
       weight: "100g",
-      price: "R$ 27,00"
+      price: "R$ 25,00"
     }],
     color: "from-emerald-700/20 to-red-600/20"
   }];
