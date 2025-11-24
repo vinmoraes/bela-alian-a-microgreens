@@ -44,7 +44,7 @@ const Products = () => {
       price: "R$ 11,00"
     }, {
       weight: "100g",
-      price: "R$ 24,00"
+      price: "R$ 15,00"
     }],
     color: "from-yellow-500/20 to-amber-500/20"
   }, {
