@@ -64,8 +64,7 @@ const Location = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Telefone</h4>
                     <p className="text-foreground/70">
-                      (19) 997379973
-Segunda a Sexta: 8h às 17h<br />
+                      (19) 997379973<br />
                       Segunda a Sexta: 8h às 18h
                     </p>
                   </div>
