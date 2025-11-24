@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone } from "lucide-react";
 const Location = () => {
-  // Coordinates for Amparo, SP
-  const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58901.97!2d-46.7658!3d-22.7028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8f7e2ea4e2297%3A0x2b0b9e5e6e8e6e6e!2sAmparo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr`;
+  // Sítio Bela Aliança - Amparo, SP with marker
+  const mapUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Sítio+Bela+Aliança,Estrada+Municipal+dos+Pereiras,Amparo+SP&zoom=15&maptype=roadmap`;
   return <section id="onde-estamos" className="py-20 md:py-32 bg-gradient-warm">
       <div className="container mx-auto px-4">
         <motion.div initial={{
