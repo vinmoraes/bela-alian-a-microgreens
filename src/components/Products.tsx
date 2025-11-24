@@ -83,6 +83,30 @@ const Products = () => {
       price: "R$ 23,00"
     }],
     color: "from-lime-500/20 to-green-500/20"
+  }, {
+    name: "Repolho Roxo",
+    description: "Sabor suave e adocicado com coloração vibrante roxa",
+    uses: "Saladas coloridas, decoração de pratos, wraps, bowls",
+    prices: [{
+      weight: "40g",
+      price: "R$ 12,00"
+    }, {
+      weight: "100g",
+      price: "R$ 26,00"
+    }],
+    color: "from-violet-600/20 to-purple-600/20"
+  }, {
+    name: "Agrião Apimentado",
+    description: "Sabor picante e intenso, perfeito para adicionar um toque especial",
+    uses: "Saladas, sanduíches, pizzas, pratos quentes",
+    prices: [{
+      weight: "40g",
+      price: "R$ 13,00"
+    }, {
+      weight: "100g",
+      price: "R$ 27,00"
+    }],
+    color: "from-emerald-700/20 to-red-600/20"
   }];
   return <section id="produtos" className="py-20 md:py-32 bg-gradient-warm">
       <div className="container mx-auto px-4">
