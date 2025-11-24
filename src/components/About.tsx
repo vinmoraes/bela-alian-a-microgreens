@@ -9,7 +9,6 @@ const About = () => {
       className="py-20 md:py-32 bg-cover bg-center bg-no-repeat relative"
       style={{ backgroundImage: `url(${aboutBackground})` }}
     >
-      <div className="absolute inset-0 bg-black/40"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <motion.div
